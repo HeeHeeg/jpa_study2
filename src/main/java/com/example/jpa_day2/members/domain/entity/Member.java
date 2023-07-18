@@ -1,5 +1,6 @@
 package com.example.jpa_day2.members.domain.entity;
 
+import com.example.jpa_day2.config.domain.entity.MemberLogin;
 import com.example.jpa_day2.todos.domain.entity.Todo;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,5 +31,8 @@ public class Member {
     //+멤버는 많은 todo를 가지고 있음. 나는(member)한명. 게시글은 많을 수 있음. 필드값 적어줘야 함.
     @OneToMany(mappedBy = "member")
     private List<Todo> todos;
+
+    @OneToMany(mappedBy = "member")
+    private List<MemberLogin> logins;
 
 }
