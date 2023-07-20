@@ -1,6 +1,6 @@
 package com.example.jpa_day2.todos.domain.entity;
 
-import com.example.jpa_day2.members.domain.entity.Member;
+import com.example.jpa_day2.members.domain.entity.Members;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,5 +21,5 @@ public class Todo {
 
     //+주가 되는 테이블을 설정해줘야함. todo는 멤버1명을 가지고 있음. 나(todo)는 많다.
     @ManyToOne
-    private Member member;
+    private Members member;
 }

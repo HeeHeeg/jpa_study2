@@ -15,7 +15,7 @@ import java.util.List;
 @Getter @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Member {
+public class Members {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //IDENTITY를 해야 오토 인크리먼트로 생성됨.
     private Long id;
 
