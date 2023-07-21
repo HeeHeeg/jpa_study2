@@ -24,8 +24,7 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
     private final MemberLoginService memberLoginService;
-    private final AuthService authService;
-
+    private final AuthService authService
     //여기서 insert는 signup이다.
     public void insert(SignupRequest request) { // 아무것도 반환을 안해주니 그냥 insert로 적어줌.
         Optional<Members> byEmail = memberRepository.findByEmail(request.email());
